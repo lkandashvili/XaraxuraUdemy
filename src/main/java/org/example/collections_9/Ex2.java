@@ -1,9 +1,6 @@
 package org.example.collections_9;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Ex2 {
 
@@ -14,21 +11,17 @@ public class Ex2 {
         Car car3 = new Car("BMW","e34", 1993);
         Car car4 = new Car("BMW","e39", 1994);
         Car car5 = new Car("BMW","e46", 1999);
-        Set<Car> carList = new HashSet<>();
-        carList.add(car1);
-        carList.add(car3);
-        carList.add(car4);
-        carList.add(car5);
-        carList.add(car2);
+        Set<Car> carSet = new HashSet<>();
+        carSet.add(car1);
+        carSet.add(car3);
+        carSet.add(car4);
+        carSet.add(car5);
+        carSet.add(car2);
 
+        for (Car car : carSet) {
+            System.out.println(car);
+        }
 
-
-
-//            if(i != carList.size()-1) {
-//                if (!carList.equals(carList.get(i+1))) {
-//                    System.out.println(carList.get(i));
-//                }
-//            }else System.out.println(carList.get(i));
 
 
     }

@@ -1,9 +1,35 @@
 package org.example.collections_9;
 
-public class Car {
+import java.util.Objects;
+
+public class Car implements Comparable {
     String mark;
     String model;
     int year;
+
+    public String getMark() {
+        return mark;
+    }
+
+    public void setMark(String mark) {
+        this.mark = mark;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 
     public Car(String mark, String model, int year) {
         this.mark = mark;
@@ -18,5 +44,23 @@ public class Car {
                 ", model='" + model + '\'' +
                 ", year=" + year +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return year == car.year && Objects.equals(mark, car.mark) && Objects.equals(model, car.model);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(mark, model, year);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
