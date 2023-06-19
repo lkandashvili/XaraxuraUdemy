@@ -30,13 +30,15 @@ public class Ex5 {
             }
         });
 
-        String modelToDelete = "e34";
+        String modelToDelete = "e30";
+        Car dummyCar = new Car("BMW",modelToDelete, 193);
 
-        for (Car car : carList) {
-            if (Objects.equals(car.getModel(), modelToDelete)) {
-                carList.remove(car);
+        for (int i=0 ; i < carList.size(); i++) {
+            if (carList.get(i).equals(dummyCar)) {
+                carList.remove(i);
+                if (i == carList.size()){continue;}
             }
-            System.out.println(car);
+            System.out.println(carList.get(i));
         }
 
     }

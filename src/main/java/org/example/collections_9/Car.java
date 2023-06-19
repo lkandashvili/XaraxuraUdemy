@@ -51,12 +51,12 @@ public class Car implements Comparable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return year == car.year && Objects.equals(mark, car.mark) && Objects.equals(model, car.model);
+        return Objects.equals(model, car.model);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(mark, model, year);
+        return Objects.hash(model);
     }
 
     @Override
