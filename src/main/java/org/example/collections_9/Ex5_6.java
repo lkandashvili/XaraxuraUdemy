@@ -3,9 +3,8 @@ package org.example.collections_9;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
 
-public class Ex5 {
+public class Ex5_6 {
 
     public static void main(String[] args) {
         Car car1 = new Car("BMW", "e30", 1990);
