@@ -1,5 +1,10 @@
 package org.example;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+
 public class StreamsStuff {
     public static void main(String[] args) {
         String peopleText = """
@@ -21,12 +26,24 @@ public class StreamsStuff {
                 Rubble, Betty, 4/4/1915, CEO, {avgStockPrice=300}
                 """;
 
-        peopleText
-                .lines()
-                .map(Employee::createEmployee)
-                .forEach(System.out::println);
+        try {
+            Files.lines(Path.of("K:\\JAVA udemy\\JAVA Udemy Projects\\UdemyXARAXURA\\src\\main\\java\\org\\example\\employees.txt"))
+                    .forEach(System.out::println);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+//        peopleText
+//                .lines()
+//                .map(Employee::createEmployee)
+//                .forEach(System.out::println);
 //                .forEach((String s) -> System.out.println(s));
 
+        List<String> nums = List.of("one", "two", "three", "four");
+        nums
+                .stream()
+                .map(String::toUpperCase)
+                .forEach(System.out::println);
 
     }
 }
