@@ -32,7 +32,7 @@ public abstract class Employee implements IEmployee {
         }
     }
 
-    public static final IEmployee createEmployee(String employeeText) {
+    public static IEmployee createEmployee(String employeeText) {
 
         Matcher peopleMat = Employee.PEOPLE_PAT.matcher(employeeText);
         if (peopleMat.find()) {

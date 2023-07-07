@@ -26,24 +26,24 @@ public class StreamsStuff {
                 Rubble, Betty, 4/4/1915, CEO, {avgStockPrice=300}
                 """;
 
-        try {
-            Files.lines(Path.of("K:\\JAVA udemy\\JAVA Udemy Projects\\UdemyXARAXURA\\src\\main\\java\\org\\example\\employees.txt"))
-                    .forEach(System.out::println);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Files.lines(Path.of("K:\\JAVA udemy\\JAVA Udemy Projects\\UdemyXARAXURA\\src\\main\\java\\org\\example\\employees.txt"))
+//                    .forEach(System.out::println);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
-//        peopleText
-//                .lines()
-//                .map(Employee::createEmployee)
-//                .forEach(System.out::println);
+        peopleText
+                .lines()
+                .map(Employee::createEmployee)
+                .forEach(System.out::println);
 //                .forEach((String s) -> System.out.println(s));
 
-        List<String> nums = List.of("one", "two", "three", "four");
-        nums
-                .stream()
-                .map(String::toUpperCase)
-                .forEach(System.out::println);
+//        List<String> nums = List.of("one", "two", "three", "four");
+//        nums
+//                .stream()
+//                .map(String::toUpperCase)
+//                .forEach(System.out::println);
 
     }
 }
